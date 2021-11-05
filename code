@@ -1,0 +1,16 @@
+def guess_number():
+    guesses = 1
+    max = 101
+    min = 0
+    while guesses > 0:
+        middle = int((max + min)/2)
+        answer = input ("Think of a number between 1 and 100,Is your number [H]igher, [L]ower or the [S]ame as {}".format(middle)).upper()
+        if answer == "H":
+            guesses += 1
+            min = middle
+        elif answer == "L":
+            guesses += 1
+            max = middle
+        else:
+            print("Your number is {}, it took me {} guess(es)".format(middle, guesses))
+            quit()
